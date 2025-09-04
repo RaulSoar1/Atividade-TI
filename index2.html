@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-         button {
-                 padding: 20px;
-                 background-color: lightblue;
-         }
-      </style>
+  <meta charset="UTF-8">
+  <title>AtividadeJS-02 - Boas-Vindas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-       <h1>interagindo com o usuario</h1>
-       <button onclick="inicio()">comece AQUÍ</button>
+  <h1>Boas-Vindas</h1>
+  <button onclick="boasVindas()">Clique aqui</button>
 
-<script>
-     function inicio() {
-      let nome = window.prompt('qual o seu nome?')
-      window.alert('olá, ${nome}! seja bem-vindo!')
-     }
-</script>
-
-
+  <script>
+    function boasVindas() {
+      const nome = prompt("Qual é o seu nome?");
+      const idade = prompt(`Olá, ${nome}! Quantos anos você tem?`);
+      alert(`Que maravilha! ${nome} tem ${idade} anos!`);
+    }
+  </script>
 </body>
 </html>

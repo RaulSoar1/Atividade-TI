@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>AtividadeJS-04 - Calculadora de Troco</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Troco</h1>
+  <button onclick="calcularTroco()">Calcular</button>
+
+  <script>
+    function calcularTroco() {
+      const produto = prompt("Qual é o nome do produto?");
+      const preco = parseFloat(prompt(`Qual é o preço do(a) ${produto}?`).replace(',', '.'));
+      const dinheiro = parseFloat(prompt(`Quanto em dinheiro foi entregue para pagar o(a) ${produto}?`).replace(',', '.'));
+
+      if (!isNaN(preco) && !isNaN(dinheiro)) {
+        const troco = dinheiro - preco;
+        alert(`Você comprou ${produto}, que custa R$${preco.toFixed(2)}.\nDeu R$${dinheiro.toFixed(2)} em dinheiro e vai receber R$${troco.toFixed(2)} de troco!\nVolte sempre!`);
+      } else {
+        alert("Por favor, informe valores numéricos válidos.");
+      }
+    }
+  </script>
+</body>
+</html>
